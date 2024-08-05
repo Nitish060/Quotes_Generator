@@ -12,6 +12,7 @@ function getRandomQuotes(quotesArray){
 }
 
 async function getQuotes(){
+    quotesArrayData.length = 0;
     await fetchData()
     let randomNumber = getRandomQuotes(quotesArrayData.length)
     document.getElementById('quote').innerHTML = ' " ' + quotesArrayData[randomNumber].quote + ' " '
